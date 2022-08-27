@@ -3,11 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stats Preview Card Component | correlucas</title>
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <title>Document</title>
   </head>
+
   <body>
-    <h1>This is the Gulp Template file.</h1>
+    <main>
+      <div class="hero-text">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p>
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <div class="highlights">
+          <div>
+            <h2>10k+</h2>
+            <p class="all-caps">Companies</p>
+          </div>
+          <div>
+            <h2>314</h2>
+            <p class="all-caps">Templates</p>
+          </div>
+          <div>
+            <h2 class="all-caps">12m+</h2>
+            <p class="all-caps">Queries</p>
+          </div>
+        </div>
+      </div>
+      <picture class="hero-image">
+        <source
+          srcset="./images/image-header-mobile.webp"
+          media="(max-width: 620px)"
+        />
+        <img
+          src="./images/image-header-desktop.webp"
+          alt="Office Workers Smiling"
+        />
+      </picture>
+    </main>
   </body>
 </html>
