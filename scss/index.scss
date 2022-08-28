@@ -1,6 +1,170 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// IMPORT THE FONTS
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lexend+Deca&display=swap);
+
+$purple: rgb(183, 75, 255);
+$white: rgb(246, 234, 248);
+$dark-purple: hsla(246, 38%, 16%, 1);
+$gray: rgb(159, 158, 182);
+$background: hsla(233, 46%, 7%, 1);
+
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
 
 body {
-  color: red;
-  background-color: aqua;
+  font-family: Inter, sans-serif;
+  background: linear-gradient(180deg, #351544 0, #100020 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 14px;
+  gap: 2.5rem;
+  padding-left: 3.75rem;
+  margin: 32px;
+
+  background: linear-gradient(
+    to top,
+    hsla(246, 38%, 16%, 0.3) 20%,
+    rgb(70, 39, 98, 0.5) 90%
+  );
+  transition: all ease 0.5s;
+  box-shadow: 0.75rem 0.75rem 12.5rem 1.25rem rgb(203 12 153 / 22%);
+
+  &:hover {
+    box-shadow: 0.75rem 0.75rem 12.5rem 1.25rem rgb(203 12 153 / 90%);
+    transform: scale(1.02);
+    transition: 0.5s all ease;
+  }
+}
+
+.hero-image {
+  background: linear-gradient(320deg, #ff61f3 0, #b86ffb 100%);
+  border-radius: 0 14px 14px 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 14px 14px 0;
+    opacity: 0.8;
+    transition: 1s ease-in-out;
+  }
+}
+
+.hero-text {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  column-gap: 6.25rem;
+  row-gap: 1rem;
+  padding-block: 1.25rem;
+
+  .all-caps {
+    text-transform: uppercase;
+  }
+  p {
+    font-weight: 500;
+    color: $gray;
+    font-size: 15.2px;
+    line-height: 1.75;
+  }
+
+  .highlights {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2.5rem;
+
+    p {
+      font-size: 12.8px;
+
+      font-family: "Lexend Deca", sans-serif;
+      letter-spacing: 0.0875rem;
+    }
+
+    h2 {
+      font-size: 28.8px;
+      font-weight: 700;
+      padding-bottom: 8px;
+      background-image: linear-gradient(
+        to right,
+        #af5ec3,
+        #ef45b4,
+        #fa747d,
+        #f7a0cf,
+        #ef45b4,
+        #af5ec3
+      );
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: move 5s linear infinite;
+      animation-delay: 5s;
+    }
+  }
+
+  p,
+  h1 {
+    max-width: 25rem;
+  }
+
+  h1,
+  h2,
+  span {
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  h1 {
+    background: linear-gradient(100deg, #fbf9fb -12.67%, #c7a6c8 105.92%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  span {
+    background-image: linear-gradient(
+      to right,
+      #af5ec3,
+      #ef45b4,
+      #fa747d,
+      #f7a0cf,
+      #ef45b4,
+      #af5ec3
+    );
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 5s linear infinite;
+    animation-delay: 5s;
+  }
+}
+
+@keyframes move {
+  to {
+    background-position: 300% center;
+  }
 }
